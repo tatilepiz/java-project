@@ -1,4 +1,4 @@
-<?xml version="1.0*"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project name="Rectangle-Build" default="main" basedir=".">
 	<property environment="env" />
 	
@@ -34,7 +34,7 @@
 	</target>
 	
 	<!-- Creates the deployable jar file -->
-	<target>
+	<target name="jar" depends="compile">
 		<jar destfile="${dir.dist}\rectangle.jar" basedir="${build.dir}">
 			<manifest>
 				<attribute name="Main-Class" value="Rectangulator" />

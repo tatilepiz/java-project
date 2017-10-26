@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <project name="Rectangle-Build" default="main" basedir=".">
 	<property environment="env" />
 	
@@ -23,7 +23,7 @@
 	<target name="makedir">
 		<mkdir dir="${build.dir}" />
 		<mkdir dir="${docs.dir}" />
-		<mkdir dir="${dir.dir}" />
+		<mkdir dir="${dist.dir}" />
 	</target>
 	
 	<!-- Compiles the java code (including the usage of library for JUnit) -->
@@ -35,7 +35,7 @@
 	
 	<!-- Creates the deployable jar file -->
 	<target name="jar" depends="compile">
-		<jar destfile="${dir.dist}\rectangle.jar" basedir="${build.dir}">
+		<jar destfile="${dist.dir}\rectangle.jar" basedir="${build.dir}">
 			<manifest>
 				<attribute name="Main-Class" value="Rectangulator" />
 			</manifest>
